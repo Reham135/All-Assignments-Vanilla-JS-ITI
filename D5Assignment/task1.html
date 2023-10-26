@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <title>student register</title>
+
+    <style>
+        #legendId {
+            background-color: rgb(102, 102, 233);
+            text-align: center;
+            color: white;
+            height: 40px;
+            width: 650px;
+            margin-left: 280px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #tableId {
+
+            margin: 0 auto;
+        }
+
+
+
+        #formId {
+            margin-left: 60px;
+
+        }
+
+
+        #divId {
+            background-color: antiquewhite;
+            width: 700px;
+            display: block;
+            margin: 0 auto;
+            border: 2px black solid;
+        }
+
+        #addId {
+            width: 300px;
+            padding: 4px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        #deleteId {
+            width: 300px;
+            padding: 4px;
+            display: block;
+            margin: auto;
+        }
+
+        #deleteAllId {
+            width: 300px;
+            height: 45px;
+            padding: 4px;
+            display: block;
+            margin: auto;
+            color: white;
+            background-color: red;
+        }
+
+        #nameId {
+
+            width: 30%;
+            display: block;
+            margin: auto;
+
+
+
+        }
+
+        #ageId {
+            width: 30%;
+            display: block;
+            margin: auto;
+
+
+        }
+
+        #coursesId {
+            width: 30%;
+            display: block;
+            margin: auto;
+        }
+
+        #dTable {
+            background-color: rgb(102, 102, 233);
+            text-align: center;
+            color: white;
+            height: 40px;
+            width: 650px;
+            margin-left: 280px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            border: 1px black solid;
+        }
+        #divTable{
+            border: 1px black solid;
+            margin: 0 auto;
+            height: 40px;
+            width: 800px;
+            text-align: center;
+        }
+        #div3{
+            border:2px solid black ;
+            width: 650px;
+             margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <legend id="legendId"><b>Register</b></legend>
+    <br>
+
+    <div id="divId">
+        <pre></pre>
+        <form name="student register form" id="formId">
+
+            <label id="labelId">Name</label>
+            <input type="text" name="name" id="nameId" value="" oninput="changeColor()" >
+            <br>
+            <label id="labelId">Age</label>
+            <input type="number" name="age" id="ageId" value="" oninput="changeAgeColor()">
+            <br>
+            <label id="labelId">Courses</label>
+            <select id="coursesId" name="courses" multiple>
+                <option value="Html">Html</option>
+                <option value="Css">Css</option>
+                <option value="Js">Js</option>
+                <option value="c#">c#</option>
+                <option value="php">php</option>
+                <option value="oop">oop</option>
+            </select>
+        </form>
+        <input type="button" value="add" id="addId" onclick="addFun()" />
+        <pre></pre>
+        <input type="button" value="Delete" id="deleteId" onclick="deleteLastRow()" />
+        <pre></pre>
+    </div>
+    <hr>
+    <div id="dTable">
+        <b>Table Data</b>
+    </div>
+    <br>
+    <div id="div3" >
+    <table  id="tableId">
+        <thead>
+            <tr>
+                <th style="width: 400px;"> Name </th>
+                <th style="width: 200px;"> Age </th>
+                <th style="width: 100px;"> Courses </th>
+                <th style="width: 50px;"> Actions </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+    <input type="button" value="DELETE ALL" id="deleteAllId" onclick="deleteAll()" />
+
+    <script src="script1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        //Getting Cookie in ANOTHER PAGE
+        var cookie = console.log(document.cookie);
+
+        var cookie = document.cookie.split(";");
+        var usernamedata = cookie[0].split("=").slice(1).toString()
+        var useragedata = cookie[1].split("=").slice(1).toString()
+        var useraddressdata = cookie[2].split("=").slice(1).toString()
+
+        document.writeln(" Your name is : " + usernamedata + "<br>" + " Your age is : " + useragedata + "<br>" + " Your address is : " + useraddressdata);
+    </script>
+
+
+
+    <script src="cookisScript1.js"></script>
+
+</body>
+
+</html>
